@@ -37,6 +37,21 @@ bot.on('message', async message => {
         break
 
       /* Unless you know what you're doing, don't change this command. */
+      case 'ha':
+          message.channel.send('HaHa');
+        break
+
+        case 'creator':
+          message.channel.send('Bot Made By Troy Drescher(@KingElrond#0001)');
+        break
+
+        case 'scoresaber':
+        if (args.length > 0)
+          message.channel.send(args.join(' '));
+        else
+          message.reply('You did not send a scoresaber profile link to link, cancelling command.')
+        break
+
       case 'help':
         let embed =  new MessageEmbed()
           .setTitle('HELP MENU')

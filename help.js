@@ -11,5 +11,13 @@ module.exports = {
     aliases: ['repeat'],
     description: 'Repeats whatever is said.',
     format: 'say <message>'
+  },
+  'ha': {
+    description: 'sends haha',
+    format: 'ha'
+  },
+  'creator': {
+    descripton: 'responds with who made this bot',
+    format: 'creator'
   }
 }
