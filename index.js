@@ -1,7 +1,7 @@
 const { Client, MessageEmbed } = require('discord.js');
 const config = require('./config');
 const commands = require('./help');
-
+const saber = require('node-scoresaber')
 let bot = new Client({
   fetchAllMembers: true, // Remove this if the bot is in large guilds.
   presence: {
@@ -13,7 +13,26 @@ let bot = new Client({
   }
 });
 
+function allnumeric(inputtxt)
+   {
+      var numbers = /^[0-9]+$/;
+      if(inputtxt.value.match(numbers))
+      {
+      alert('Your ScoreSaber profile number has accepted....');
+      return true;
+      }
+      else
+      {
+      alert('Please input numeric characters only');
+      return false;
+      }
+   } 
+
 bot.on('ready', () => console.log(`Logged in as ${bot.user.tag}.`));
+
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+const Database = require("@replit/database")
+const db = new Database()
 
 bot.on('message', async message => {
   // Check for command
@@ -45,12 +64,22 @@ bot.on('message', async message => {
           message.channel.send('Bot Made By Troy Drescher(@KingElrond#0001)');
         break
 
-        case 'scoresaber':
+        case 'scoresaber-link':
+        case 'ss-l':
         if (args.length > 0)
+        {
+        db.set(message.author.username, args.join(' ')).then(() => {});
           message.channel.send(args.join(' '));
-        else
-          message.reply('You did not send a scoresaber profile link to link, cancelling command.')
+        } else
+          message.reply('You did not send a scoresaber profile number to link, cancelling command.')
         break
+
+        case 'ss':
+       let cid= await db.get(message.author.username);
+        const myPlayer = await saber.getPlayer(cid)
+console.log(myPlayer.rank)
+message.channel.send('Your Player Rank is: ' + myPlayer.rank);
+       break
 
       case 'help':
         let embed =  new MessageEmbed()
