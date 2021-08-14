@@ -2,6 +2,7 @@ const { Client, MessageEmbed } = require('discord.js');
 const config = require('./config');
 const commands = require('./help');
 const saber = require('node-scoresaber')
+
 let bot = new Client({
   fetchAllMembers: true, // Remove this if the bot is in large guilds.
   presence: {
@@ -70,6 +71,7 @@ bot.on('message', async message => {
         {
         db.set(message.author.username, args.join(' ')).then(() => {});
           message.channel.send(args.join(' '));
+          
         } else
           message.reply('You did not send a scoresaber profile number to link, cancelling command.')
         break
