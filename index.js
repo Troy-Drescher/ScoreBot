@@ -4,7 +4,7 @@ const commands = require('./help');
 const saber = require('node-scoresaber')
 
 let bot = new Client({
-  fetchAllMembers: true, // Remove this if the bot is in large guilds.
+  fetchAllMembers: true, // Remove this if the bot is in large guilds.a
   presence: {
     status: 'online',
     activity: {
