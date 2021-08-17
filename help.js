@@ -19,5 +19,13 @@ module.exports = {
   'creator': {
     descripton: 'responds with who made this bot',
     format: 'creator'
-  }
+  },
+	'rank': {
+    aliases: ['ss'],
+    description: 'shows ScoreSaber rank.',
+    format: 'rank'
+		'ScoreSaber-Link': {
+    aliases: ['SSL'],
+    description: 'Link scoresaber profile and discord profile',
+    format: 'ScoreSaber-Link <ScoreSaber-ID>'
 }
