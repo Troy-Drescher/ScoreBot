@@ -51,6 +51,7 @@ bot.on('message', async message => {
 				break
 
 			case 'ss':
+			case 'rank':
 				let cid = await db.get(message.author.username);
 				const myPlayer = await saber.getPlayer(cid)
 				console.log(myPlayer.rank)
