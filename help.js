@@ -24,8 +24,10 @@ module.exports = {
     aliases: ['ss'],
     description: 'shows ScoreSaber rank.',
     format: 'rank'
+	},
 		'ScoreSaber-Link': {
     aliases: ['SSL'],
     description: 'Link scoresaber profile and discord profile',
     format: 'ScoreSaber-Link <ScoreSaber-ID>'
+}
 }

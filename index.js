@@ -68,7 +68,16 @@ bot.on('message', async message => {
 						message.channel.send('Your ScoreSaber profile number has been accepted....');
 					} else
 					{
-						message.channel.send('You did not send a scoresaber profile number to link, cancelling command.');
+						let cinput2 = String(cinput);
+            if(cinput2.includes('scoresaber.com/u/'))
+            {
+              let cinput3 = cinput2.replace('scoresaber.com/u/', ' ');
+              db.set(message.author.username, cinput3.trim()).then(() => { });
+            message.channel.send('Your ScoreSaber profile number has been accepted....');
+            } else
+            {
+              message.channel.send('You did not send a scoresaber profile number to link, cancelling command.');
+            }
 					}
 					} else
 					{
