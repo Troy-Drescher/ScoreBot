@@ -68,7 +68,7 @@ bot.on('message', async message => {
 						message.channel.send('Your ScoreSaber profile number has been accepted....');
 					} else
 					{
-						let cinput2 = String(cinput);
+					let cinput2 = String(cinput);
             if(cinput2.includes('scoresaber.com/u/'))
             {
               let cinput3 = cinput2.replace('scoresaber.com/u/', ' ');

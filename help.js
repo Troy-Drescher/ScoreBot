@@ -27,7 +27,7 @@ module.exports = {
 	},
 		'ScoreSaber-Link': {
     aliases: ['SSL'],
-    description: 'Link scoresaber profile and discord profile',
+    description: 'Link scoresaber profile and discord profile, if sending scoresaber profile link do not include https://',
     format: 'ScoreSaber-Link <ScoreSaber-ID>'
 }
 }
