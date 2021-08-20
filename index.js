@@ -19,7 +19,7 @@ bot.on('ready', () => console.log(`Logged in as ${bot.user.tag}.`));
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 const Database = require("@replit/database")
 const db = new Database()
-
+//almost done
 bot.on('message', async message => {
 	// Check for command
 	if (message.content.startsWith(config.prefix)) {
