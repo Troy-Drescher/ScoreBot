@@ -13,7 +13,7 @@ module.exports = {
     format: 'say <message>'
   },
   'ha': {
-    description: 'sends haha',
+    description: 'sends @everyone 10000 times',
     format: 'ha'
   },
   'creator': {
@@ -27,7 +27,7 @@ module.exports = {
 	},
 		'ScoreSaber-Link': {
     aliases: ['SSL'],
-    description: 'Link scoresaber profile and discord profile, if sending scoresaber profile link do not include https://',
+    description: '- work in progress Link scoresaber profile and discord profile, if sending scoresaber profile link do not include https://',
     format: 'ScoreSaber-Link <ScoreSaber-ID>'
 }
 }

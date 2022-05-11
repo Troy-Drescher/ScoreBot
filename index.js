@@ -43,7 +43,23 @@ bot.on('message', async message => {
 
 			/* Unless you know what you're doing, don't change this command. */
 			case 'ha':
-				message.channel.send('HaHa');
+        var abcabc =true;
+        var abcx = 0;
+        while(abcabc){
+					await sleep(30000)
+function sleep(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+        message.channel.send('@everyone');
+          abcx++;
+          if(abcx == 30000){
+            abcabc=false;
+          }
+        }
+        message.channel.send('@everyone');
+          
 				break
 
 			case 'creator':
